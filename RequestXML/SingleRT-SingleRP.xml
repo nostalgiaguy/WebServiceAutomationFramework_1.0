@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://www.opentravel.org/OTA/2003/05/">
+<SOAP-ENV:Header>
+<wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">http://www.opentravel.org/OTA/2003/05/OTAHotelAvailabilityPull/getOTAHotelAvailabilityResponse</wsa:Action>
+<wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">151</wsa:MessageID>
+<wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" SOAP-ENV:mustUnderstand="1">
+<wsse:UsernameToken xmlns:wsu="http://Pdocs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" wsu:Id="UsernameToken-27777511">
+<wsse:Username>HotelBrandWebSite</wsse:Username>
+<wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">test</wsse:Password>
+</wsse:UsernameToken>
+</wsse:Security>
+</SOAP-ENV:Header>
+<SOAP-ENV:Body>
+<ns:OTA_HotelAvailRQ xmlns:ns="http://www.opentravel.org/OTA/2003/05" RequestedCurrency="INR" AvailRatesOnly="1" EchoToken="123" PrimaryLangID="zh-cn" TimeStamp="2013-11-29T04:10:35.910+01:00" Version="4.0">
+<ns:POS>
+<Source>
+<RequestorID ID="32" Type="13"/>
+<BookingChannel Primary="1" Type="2">
+<CompanyName Code="999999">RateTigerBookingEngine</CompanyName>
+</BookingChannel>
+</Source>
+</ns:POS>
+<ns:AvailRequestSegments>
+<ns:AvailRequestSegment AvailReqType="Both">
+<ns:HotelSearchCriteria>
+<Criterion>
+<StayDateRange Duration="1" Start="2017-01-01"/>
+<RatePlanCandidates>
+<RatePlanCandidate RatePlanCode="ED_RP"/>
+</RatePlanCandidates>
+<RoomStayCandidates>
+<RoomStayCandidate Quantity="1" RoomTypeCode="ED_RT">
+<GuestCounts IsPerRoom="">
+<GuestCount Age="10" AgeQualifyingCode="10" Count="1"/>
+</GuestCounts>
+</RoomStayCandidate>
+</RoomStayCandidates>
+<HotelRef HotelCode="38581"/>
+</Criterion>
+</ns:HotelSearchCriteria>
+</ns:AvailRequestSegment>
+</ns:AvailRequestSegments>
+</ns:OTA_HotelAvailRQ>
+</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
