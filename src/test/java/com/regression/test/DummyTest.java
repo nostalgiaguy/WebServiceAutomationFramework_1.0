@@ -7,7 +7,7 @@ import org.junit.Assert;
 import org.testng.annotations.Test;
 import org.xml.sax.SAXException;
 
-import com.regression.ARIShopRequest;
+import com.regression.ServiceRequest.ARIShopRequest;
 import com.regression.xmlComparator.XMLComparator;
 
 public class DummyTest {
